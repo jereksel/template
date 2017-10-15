@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ThemePack",
+  "type": "object",
+  "properties": {
+    "themes": {
+      "type": "array",
+      "items": {
+        "title": "Theme",
+        "type": "object",
+        "properties": {
+          "appId": {
+            "type": "string"
+          },
+          "type1": {
+            "type": "array",
+            "items": {
+              "title": "Type1 Data",
+              "type": "object",
+              "properties": {
+                "suffix": {
+                  "description": "Can be 'a', 'b' or 'c'",
+                  "type": "string"
+                },
+                "extensions": {
+                  "type": "array",
+                  "items": {
+                    "title": "Type1 extension",
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "default": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "type2": {
+            "type": "array",
+            "items": {
+              "title": "Type2 Extension",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "default": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "type4": {
+
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "type3": {
+      "type": "array",
+      "items": {
+        "title": "Type3 Extension",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "default": {
+            "type": "boolean"
+          }
+        }
+      },
+      "minItems": 0
+    }
+  },
+  "required": ["themes", "type3"]
+}
